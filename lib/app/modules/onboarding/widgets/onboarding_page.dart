@@ -58,39 +58,8 @@ class OnboardingPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 32),
-
-          // Conditional Widgets
-          // if (showDemo) const QuickConvertDemo(),
-          // if (showPremium) const PremiumFeatures(),
-          if (showCTA) _buildCTAButtons(context),
         ],
       ),
-    );
-  }
-
-  Widget _buildCTAButtons(BuildContext context) {
-    return Column(
-      children: [
-        ElevatedButton(
-          onPressed: () {},
-          style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 48,
-              vertical: 16,
-            ),
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
-            ),
-          ),
-          child: const Text('Create Account'),
-        ),
-        const SizedBox(height: 16),
-        TextButton(
-          onPressed: () {},
-          child: const Text('Already have an account? Login'),
-        ),
-      ],
     );
   }
 }
